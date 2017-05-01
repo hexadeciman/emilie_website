@@ -1,0 +1,13 @@
+html, body{
+  color:white;
+  background-color: $black;
+  height: 100%;
+}
+
+a{
+  color: $white;
+}
+
+a.active{
+  color: $teal;
+}

@@ -1,0 +1,44 @@
+doctype
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title Emilie Pictet
+    meta(name='description', content='Emilie Pictet Website')
+    meta(name='viewport', content='width=device-width, user-scalable=no')
+    link(rel='stylesheet', href='../main.css')
+    
+    script(src='main.js')
+
+  body
+    <!--[if lt IE 8]>
+    p.browsehappy
+      | You are using an <strong>outdated</strong> browser.
+      | Please <a href="http://browsehappy.com/">upgrade your browser</a>
+      | to improve your experience.
+    <![endif]-->
+  
+    .header
+      a(href="/")
+        h1 Emilie Pictet
+      a.menu-button#menuButton(href="#")
+        span.burger-icon
+      nav#menu
+        ul
+          li 
+            a(href="/") Accueil
+          li 
+            a.active(href="#") Biographie
+          li 
+            a(href="#") Actualité
+          li 
+            a(href="#") Repertoire
+          li
+            a(href="#") Media
+          li
+            a(href="#") Galerie
+          li
+            a(href="#") Contact
+    #hider
+
+.content.content--biographie

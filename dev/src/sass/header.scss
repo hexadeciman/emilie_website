@@ -1,0 +1,94 @@
+@import "burger";
+
+.menu-button {
+	display: inline-block;
+	padding: .5em;
+}
+
+.burger-icon {
+	@include burger(25px, 3px, 5px, $white);
+}
+
+.menu-button.is-active .burger-icon {
+	@include burger-to-cross;
+}
+
+#hider {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(49, 49, 49);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+#menu {
+  display: none;
+}
+.header{
+  display:flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  font-size: 1.1rem;
+  position: fixed;
+  padding: 50px;
+  width: calc(100% - #{$body-padding-m * 2});
+  z-index: 2;
+}
+
+.header h1{
+  margin: 0;
+  font-family: Marguerite;
+  font-size: 30px;
+  color: $white;
+  height: 70px;
+  line-height: 40px;
+  width: 100px;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header nav {
+  width: 100%;
+}
+
+.header ul li{
+  color: $white;
+  margin-bottom: 1em;
+}
+
+.header ul:first-child{
+  margin-top: 2em;
+}
+
+.header ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+// Desktop specific rules
+@media only screen and (min-width: 768px) {
+  .header{
+    width: calc(100% - #{$body-padding-d * 2});
+  }
+  .header nav {
+    width: auto;
+  }
+  .header ul{
+    display:flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: row;
+  }
+  .header ul li{
+    margin-left: 1rem;
+  }
+  .menu-button {
+  	display: none;
+  }
+  #menu {
+    display: inline;
+  }
+}

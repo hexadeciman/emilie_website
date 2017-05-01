@@ -1,0 +1,10 @@
+[
+  {
+    "outputFileName": "build/main.css",
+    "inputFiles": [ "dev/src/sass/reset.scss", "dev/src/sass/main.scss" ]
+  },
+  {
+    "outputFileName": "build/main.js",
+    "inputFiles": [ "dev/lib/*.js", "dev/src/main.js" ]
+  }
+]
