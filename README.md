@@ -6,3 +6,5 @@
 > gulp build
 
 > gulp webserver
+
+3. Open browser at localhost:8000
